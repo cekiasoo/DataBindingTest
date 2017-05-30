@@ -1,0 +1,67 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <!--<import type="com.ce.advanced.adapter.UserAdapter" />
+        <variable
+            name="adapter"
+            type="UserAdapter" />-->
+        <variable
+            name="presenter"
+            type="com.ce.advanced.event.UserFragmentPresenter" />
+        <variable
+            name="adapter2"
+            type="com.ce.advanced.recycler.UserAdapter" />
+        <variable
+            name="layoutManager"
+            type="android.support.v7.widget.RecyclerView.LayoutManager" />
+    </data>
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="com.ce.advanced.activity.UserActivity">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title="@string/users_fragment"/>
+        </android.support.design.widget.AppBarLayout>
+        <RelativeLayout
+            android:id="@+id/content_test"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <!--<ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adapter="@{adapter}">
+            </ListView>-->
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layoutManager="@{layoutManager}"
+                android:adapter="@{adapter2}">
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:onClick="@{() -> presenter.onUserAdd()}"
+            app:srcCompat="@drawable/ic_add_white_24dp" />
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

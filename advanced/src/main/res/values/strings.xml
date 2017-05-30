@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">advanced</string>
+    <string name="title_activity_users">UsersActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="users_fragment">Users fragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_test">TestActivity</string>
+</resources>
